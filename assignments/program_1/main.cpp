@@ -13,7 +13,6 @@
 
 using namespace std;
 
-
 // Structure to hold an rgb value
 struct rgb {
 	int r;
@@ -210,6 +209,5 @@ int main()
 		}
 		ofile << endl;
 	}
-
-		return 0;
+	return 0;
 } // end of main
