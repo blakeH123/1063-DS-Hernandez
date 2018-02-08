@@ -32,17 +32,16 @@ struct rgb {
 * @Returns: void
 */
 void flipHorz(rgb** image, int width, int height)
-{	int Rtemp, Gtemp, Btemp, k;				// temporary variables for swap that
-											// "flips" the array horizontaly
-	int halfwidth = width / 2;				// speeds up for loop execution
+{	int Rtemp, Gtemp, Btemp, k;			// temporary variables for swap that
+							// "flips" the array horizontaly
+	int halfwidth = width / 2;			// speeds up for loop execution
 	for (int i = 0; i < height; i++)
-	{	for (int j = 0; j < halfwidth; j++) // halfwidth used for swap to end
-											// the loop because if we used width,
-											// we would get what we started with.
-		{	k = width - 1 - j;				// k, used to meet j in the middle
-											// for swap.
-			// Swap begins
-			Rtemp = image[i][j].r;
+	{	for (int j = 0; j < halfwidth; j++) 	// halfwidth used for swap to end
+							// the loop because if we used width,
+							// we would get what we started with.
+		{	k = width - 1 - j;		// k, used to meet j in the middle
+							// for swap.
+			Rtemp = image[i][j].r;		// Swap begins
 			Gtemp = image[i][j].g;
 			Btemp = image[i][j].b;
 
@@ -52,7 +51,7 @@ void flipHorz(rgb** image, int width, int height)
 
 			image[i][k].r = Rtemp;
 			image[i][k].g = Gtemp;
-			image[i][k].b = Btemp; // Swap ends
+			image[i][k].b = Btemp;		 // Swap ends
 		} // end inner for loop
 	} // end outer for loop
 } // end of flipHorz function
@@ -68,19 +67,18 @@ void flipHorz(rgb** image, int width, int height)
 * @Returns: void
 */
 void flipVert(rgb** image, int width, int height)
-{	int Rtemp, Gtemp, Btemp, k;				// temporary variables for the swap
-											// that "flips" the array
+{	int Rtemp, Gtemp, Btemp, k;			// temporary variables for the swap
+							// that "flips" the array
 	int halfheight = height / 2;			// saves execution time in for loop
-											// by not performing same opperation
-											// multiple times
+							// by not performing same opperation
+							// multiple times
 	for (int j = 0; j < width; j++)
-	{	for (int i = 0; i < halfheight; i++)// halfheight used for swap to end
-											// the loop because if we used width,
-											// we would get what we started with.
-		{	k = height - 1 - i;				// k, used to meet i in the middle
-											// for swap
-			// Swap begins
-			Rtemp = image[i][j].r;
+	{	for (int i = 0; i < halfheight; i++)	// halfheight used for swap to end
+							// the loop because if we used width,
+							// we would get what we started with.
+		{	k = height - 1 - i;		// k, used to meet i in the middle
+							// for swap
+			Rtemp = image[i][j].r;		// Swap begins
 			Gtemp = image[i][j].g;
 			Btemp = image[i][j].b;
 
@@ -90,7 +88,7 @@ void flipVert(rgb** image, int width, int height)
 
 			image[k][j].r = Rtemp;
 			image[k][j].g = Gtemp;
-			image[k][j].b = Btemp; // Swap ends
+			image[k][j].b = Btemp;		 // Swap ends
 		} // end of inner for loop
 	} // end of outer for loop
 } // end of flipVert function
@@ -132,12 +130,12 @@ int main()
 	int height;              //height of image
 
 	rgb **imgArray;         //Pointer var for our 2D array because we         
-							//don't know how big the image will be!
+				//don't know how big the image will be!
 
-	ifile >> width >> height;   //Read in width and height from top of input file
-								//We need this so we can make the array the right 
-								//size. After we get these two values, we can
-								//now allocate memory for our 2D array.
+	ifile >> width >> height;//Read in width and height from top of input file
+				 //We need this so we can make the array the right 
+				 //size. After we get these two values, we can
+				 //now allocate memory for our 2D array.
 
 	imgArray = new rgb*[height];    //This array points to every row
 
