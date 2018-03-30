@@ -236,7 +236,7 @@ string pop()
   
 /**
 * Function outfileList:
-*      prints list to output file.
+*      Prints list node value and number on list to output file.
 * Params:
 *      outfile
 * Returns
