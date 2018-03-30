@@ -197,7 +197,7 @@ string pop()
 		if(empty())
 		{  return;
 		}
-
+		// switches node values rather than rewiring pointers
 		while (temp->next != NULL)
 		{	string word1 = temp->val;
 			string word2 = temp->next->val;
