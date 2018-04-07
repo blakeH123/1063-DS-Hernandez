@@ -1,4 +1,9 @@
  ```cpp
+ // Blake Hernandez
+ // fix linked list - swap function
+ // 1063 - Griffin
+ // 08 04 2018
+ 
  //assumptions are list is >= length(2);
  // swaps sets of neighbors
  // 1: head->A->B->C->D->E->NULL
