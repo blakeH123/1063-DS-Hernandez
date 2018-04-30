@@ -1,3 +1,4 @@
+```cpp
 Animals Popped off the Queue:
 
 1 crow
@@ -238,3 +239,4 @@ Animals Remaining on the Queue (in order of priority):
 25 nightingale
 26 prairie-dog
 27 komodo-dragon
+```
